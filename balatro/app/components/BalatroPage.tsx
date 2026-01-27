@@ -89,9 +89,9 @@ export const Balatro = () => {
   }, [balatro]);
 
   return (
-    <>
-      <div className="vhs-overlay"></div>
-      <div className="grid grid-cols-5 bg-green-800 background-tv overflow-hidden">
+    <div className="flex flex-col h-screen w-screen overflow-hidden">
+      <div className="vhs-overlay "></div>
+      <div className="grid grid-cols-5 bg-green-800 overflow-hidden">
         <div className="col-span-1">
           <Sidebar />
         </div>
@@ -121,7 +121,7 @@ export const Balatro = () => {
         </div>
       </div>
       {phase === "GameOver" && <GameOver />}
-    </>
+    </div>
   );
 };
 
