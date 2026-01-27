@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CardContainer } from "../../components/BalatroPage";
-import { PokerCard } from "../cards/PokerCard";
+import { PokerCardSlot } from "../cards/PokerCardSlot";
 import { type ReactNode, useCallback, useEffect, useState } from "react";
 import { sortByRank, sortBySuit } from "../../core/balatro";
 import { type PokerCard as ICard } from "../../core/cards/poker-cards";
@@ -222,7 +222,7 @@ const SortableItems = ({ children, hand }: SortableItemsProps) => {
         {children}
       </SortableContext>
       <DragOverlay adjustScale style={{ transformOrigin: "0 0 " }}>
-        {activeCard ? <PokerCard card={activeCard} /> : null}
+        {activeCard ? <PokerCardSlot card={activeCard} /> : null}
       </DragOverlay>
     </DndContext>
   );

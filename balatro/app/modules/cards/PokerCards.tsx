@@ -1,5 +1,5 @@
 import { type PokerCard as IPokerCard } from "../../core/cards/poker-cards";
-import { PokerCard } from "./PokerCard";
+import { PokerCardSlot } from "./PokerCardSlot";
 
 interface PlayCardsProps {
   pokerCards: IPokerCard[];
@@ -17,19 +17,16 @@ export const PlayCards = ({
   scaleFactor,
 }: PlayCardsProps) => {
   return (
-    <div className="relative flex justify-between shrink h-full w-full mr-40">
+    <div className="relative flex justify-between shrink h-full w-full ">
       {pokerCards.map((card, index) => (
-        <div className="relative" key={card.id}>
-          <div className={`absolute hover:z-40`}>
-            <PokerCard
-              card={card}
-              onSelectCard={() => onSelectCard?.(card)}
-              selected={selectedCards?.includes(card.id)}
-              bottomComponent={bottomComponent}
-              scaleFactor={scaleFactor}
-            />
-          </div>
-        </div>
+        <PokerCardSlot
+          key={card.id}
+          card={card}
+          onSelectCard={() => onSelectCard?.(card)}
+          selected={selectedCards?.includes(card.id)}
+          bottomComponent={bottomComponent}
+          scaleFactor={scaleFactor}
+        />
       ))}
     </div>
   );

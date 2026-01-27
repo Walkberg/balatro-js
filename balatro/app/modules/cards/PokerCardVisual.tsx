@@ -26,7 +26,7 @@ interface PokerCardProps {
   scaleFactor?: number;
 }
 
-export const PokerCard = ({
+export const PokerCardVisual = ({
   card,
   onSelectCard,
   selected,
