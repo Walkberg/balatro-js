@@ -133,9 +133,9 @@ export const DeckRow = ({
   cards: PokerCard[];
 }) => {
   return (
-    <div key={suit} className="flex flex-row gap-2 h-40">
+    <div key={suit} className="flex flex-col gap-2 h-40">
       <div className="text-lg font-bold text-black capitalize">{suit}</div>
-      <div className="flex flex-row gap-2 w-full">
+      <div className="flex flex-row gap-2 ">
         <PlayCards pokerCards={cards} scaleFactor={1.5} />
       </div>
     </div>

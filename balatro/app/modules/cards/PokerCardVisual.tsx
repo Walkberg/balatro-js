@@ -43,7 +43,7 @@ export const PokerCardVisual = ({
             )}
           />
           <AnimatedCard>
-            <Card
+            <div
               onClick={onSelectCard}
               className={cn(
                 "flex flex-col cursor-pointer hover:shadow-indigo-500/60 hover:scale-125",
@@ -56,7 +56,7 @@ export const PokerCardVisual = ({
                   </CardView>
                 </CardEdition>
               </CardEnhancer>
-            </Card>
+            </div>
           </AnimatedCard>
         </div>
         {selected && (

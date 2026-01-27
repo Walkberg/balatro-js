@@ -1,14 +1,27 @@
-import { type PokerCard as ICard } from "../../core/cards/poker-cards";
-import { type ReactNode } from "react";
+import { forwardRef } from "react";
+import { cn } from "@/lib/utils";
 
 interface PokerCardSlotProps {
-  card: ICard;
-  onSelectCard?: () => void;
-  selected?: boolean;
-  bottomComponent?: ReactNode;
-  scaleFactor?: number;
+  slotId: string;
+  className?: string;
 }
 
-export const PokerCardSlot = ({}: PokerCardSlotProps) => {
-  return <div className="bg-green-200">PokerCardSlot</div>;
-};
+export const PokerCardSlot = forwardRef<HTMLDivElement, PokerCardSlotProps>(
+  ({ slotId, className }, ref) => {
+    return (
+      <div
+        ref={ref}
+        data-slot-id={slotId}
+        className={cn(
+          "flex items-end justify-center",
+          "w-[142px] h-[190px]",
+          className
+        )}
+      >
+        {/* Position physique du slot - vide pour le layout flex */}
+      </div>
+    );
+  }
+);
+
+PokerCardSlot.displayName = "PokerCardSlot";
