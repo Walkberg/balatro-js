@@ -13,7 +13,7 @@ export const PokerCardSlot = forwardRef<HTMLDivElement, PokerCardSlotProps>(
         ref={ref}
         data-slot-id={slotId}
         className={cn("flex justify-center grow", className)}
-      ></div>
+      />
     );
   },
 );
