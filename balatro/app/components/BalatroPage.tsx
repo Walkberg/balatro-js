@@ -4,23 +4,26 @@ import { type Score as IScore } from "../core/balatro";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { Shop } from "../modules/shop/Shop";
-import { BalatroProvider, useCurrentGame } from "../core/BalatroProvider";
+import { BalatroProvider, useCurrentGame } from "./BalatroProvider";
 import { type EconomyManagerPlugin } from "../core/plugins/economy-manager-plugin";
-import { type GameManagerPlugin, Phase } from "../core/plugins/game-manager";
+import {
+  type GameManagerPlugin,
+  type Phase,
+} from "../core/plugins/game-manager";
 import { type HandManagerPlugin } from "../core/plugins/hand-manager-plugin";
 import { type ScoreManagerPlugin } from "../core/plugins";
 import { cn } from "@/lib/utils";
-import { Ante } from "../core/modules/ante/Ante";
+import { Ante } from "../modules/ante/Ante";
 import { Board } from "../modules/hand/Board";
 import { HandBaseScore } from "../modules/hand-score/HandBaseScore";
 import { GameOver } from "../modules/gameover/GameOver";
 import { Deck } from "../modules/deck/Deck";
-import { BalatroHomePage } from "../core/modules/menu/HomePage";
-import { ConsumableList } from "../core/modules/consumables/Consumables";
+import { BalatroHomePage } from "../modules/menu/HomePage";
+import { ConsumableList } from "../modules/consumables/Consumables";
 import { RunInfo } from "../modules/run-info/RunInfo";
-import { BlindInfo } from "../core/modules/blinds/BlindInfo";
-import { BlindWin } from "./blinds/BlindWin";
-import { Buffons } from "../core/modules/buffons/Buffons";
+import { BlindInfo } from "../modules/blinds/BlindInfo";
+import { BlindWin } from "..//modules/blinds/BlindWin";
+import { Buffons } from "..//modules/buffons/Buffons";
 
 export const BalatroTest = () => {
   return (

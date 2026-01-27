@@ -1,4 +1,4 @@
-import { Consumable, ConsumableType } from "../../plugins";
+import { type Consumable, type ConsumableType } from "../../core/plugins";
 
 interface ConsumableDescriptionProps {
   consumable: Consumable;

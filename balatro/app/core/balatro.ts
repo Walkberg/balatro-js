@@ -1,5 +1,10 @@
 import { evaluatePokerHand, getCardValue } from "./hand-evaluator";
-import { PokerCard, Edition, CardSuit, CardRank } from "./cards/poker-cards";
+import {
+  type PokerCard,
+  type Edition,
+  type CardSuit,
+  type CardRank,
+} from "./cards/poker-cards";
 
 export type Chip = number;
 
@@ -156,7 +161,7 @@ export const baseScoreList: BaseScoreList = {
 
 export function improveBaseScoreList(
   baseScoreList: BaseScoreList,
-  type: PlanetType
+  type: PlanetType,
 ): BaseScoreList {
   const baseScore = baseScoreList[type];
 
@@ -283,7 +288,7 @@ export const drawCard = (deck: Deck): [PokerCard, Deck] => {
 
 export const drawCards = (
   deck: Deck,
-  cardCount: number
+  cardCount: number,
 ): [PokerCard[], Deck] => {
   const cards = deck.slice(-cardCount);
   const newDeck = deck.slice(0, -cardCount);
@@ -407,7 +412,7 @@ export function computePlayerHand(player: Player): Score {
 }
 
 export function convertHandTypeToPlanetType(
-  handType: PokerHandType
+  handType: PokerHandType,
 ): PlanetType {
   const record: Record<PokerHandType, PlanetType> = {
     HighCard: "pluto",
@@ -433,7 +438,7 @@ export function addChipToScore(score: Score, chip: Chip): Score {
 
 export function addMultiplierToScore(
   score: Score,
-  multiplier: Multiplier
+  multiplier: Multiplier,
 ): Score {
   return {
     ...score,
@@ -443,7 +448,7 @@ export function addMultiplierToScore(
 
 export function multiplyMultiplierToScore(
   score: Score,
-  multiplier: Multiplier
+  multiplier: Multiplier,
 ): Score {
   return {
     ...score,

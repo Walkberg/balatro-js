@@ -1,13 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
-import { useCurrentGame } from "../../BalatroProvider";
-import {
-  type BlindManagerPlugin,
-  getBlindManagerPlugin,
-  type Blind,
-} from "../../core/plugins";
+import { useCurrentGame } from "../../components/BalatroProvider";
+import { getBlindManagerPlugin, type Blind } from "../../core/plugins";
 import { Card } from "@/components/ui/card";
-import { useGameManager } from "../../../components/BalatroPage";
+import { useGameManager } from "../../components/BalatroPage";
 import { cn } from "@/lib/utils";
 
 interface AnteProps {}

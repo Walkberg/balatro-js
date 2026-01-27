@@ -1,4 +1,4 @@
-import "../../test.css";
+import "./test.css";
 import { Card } from "@/components/ui/card";
 import { getCardLabel, getBaseChip, getCardChips } from "../../core/balatro";
 import {
@@ -14,7 +14,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { type ReactNode, useRef, useState } from "react";
+import { type JSX, type ReactNode, useRef, useState } from "react";
 import { animated, useSpring } from "@react-spring/web";
 import { cn } from "@/lib/utils";
 

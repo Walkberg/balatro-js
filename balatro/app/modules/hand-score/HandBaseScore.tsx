@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { useCurrentGame } from "../../core/BalatroProvider";
+import { useCurrentGame } from "../../components/BalatroProvider";
 import {
   getHandScorePlugin,
-  HandManagerPlugin,
-  HandScoreManagerPlugin,
-  PokerHandType,
+  type HandManagerPlugin,
+  type HandScoreManagerPlugin,
+  type PokerHandType,
 } from "../../core/plugins";
-import { Score as IScore } from "../../core/balatro";
-import { Hand as IHand } from "../../core/balatro";
+import { type Score as IScore } from "../../core/balatro";
+import { type Hand as IHand } from "../../core/balatro";
 import { evaluatePokerHand } from "../../core/hand-evaluator";
 import { Card } from "@/components/ui/card";
 import { ScoreDetail } from "../../components/BalatroPage";

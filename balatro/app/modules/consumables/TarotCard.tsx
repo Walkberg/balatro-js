@@ -1,5 +1,5 @@
-import { getTarotConfig } from "../../cards/tarots";
-import { Consumable } from "../../plugins";
+import { getTarotConfig } from "../../core/cards/tarots";
+import { type Consumable } from "../../core/plugins";
 import {
   getBackgroundPosition,
   getCardSizeStyle,

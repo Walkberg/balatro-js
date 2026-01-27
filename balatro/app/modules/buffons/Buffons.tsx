@@ -2,8 +2,8 @@ import { useState } from "react";
 import { SellCard } from "../consumables/SellCard";
 import { BuffonCard } from "./BuffonCard";
 import { useBuffonManager } from "./useBuffonManager";
-import { BuffonCard as Buffon } from "../../cards/buffons";
-import { CardContainer } from "../../../components/BalatroPage";
+import { type BuffonCard as Buffon } from "../../core/cards/buffons";
+import { CardContainer } from "../../components/BalatroPage";
 
 interface BuffonsProps {}
 

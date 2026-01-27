@@ -1,9 +1,9 @@
-import { Button, ButtonProps } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import React from "react";
-import { GameManagerPlugin } from "../../plugins/game-manager";
-import { useCurrentGame } from "../../BalatroProvider";
-import { DeckPicker } from "../../../modules/deck/DeckPicker";
+import { type GameManagerPlugin } from "../../core/plugins/game-manager";
+import { useCurrentGame } from "../../components/BalatroProvider";
+import { DeckPicker } from "../deck/DeckPicker";
 
 export const BalatroHomePage = () => {
   return (

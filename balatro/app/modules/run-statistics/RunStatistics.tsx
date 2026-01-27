@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useCurrentGame } from "../../core/BalatroProvider";
+import { useCurrentGame } from "../../components/BalatroProvider";
 import {
   GameStats,
   getStatManagerPlugin,

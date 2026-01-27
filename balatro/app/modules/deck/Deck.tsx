@@ -1,11 +1,15 @@
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { useCurrentGame } from "../../core/BalatroProvider";
-import { DeckManagerPlugin } from "../../core/plugins";
+import { useCurrentGame } from "../../components/BalatroProvider";
+import { type DeckManagerPlugin } from "../../core/plugins";
 import { useEffect, useState } from "react";
-import { Deck as IDeck } from "../../core/balatro";
-import { CardRank, CardSuit, PokerCard } from "../../core/cards/poker-cards";
+import { type Deck as IDeck } from "../../core/balatro";
+import {
+  type CardRank,
+  type CardSuit,
+  type PokerCard,
+} from "../../core/cards/poker-cards";
 import { PlayCards } from "../cards/PokerCards";
-import { DeckConfigId, getDeckConfig } from "../../core/decks/decks";
+import { type DeckConfigId, getDeckConfig } from "../../core/decks/decks";
 function useDeck() {
   const [fullDeck, setFullDeck] = useState<IDeck | null>(null);
   const [deck, setDeck] = useState<IDeck | null>(null);

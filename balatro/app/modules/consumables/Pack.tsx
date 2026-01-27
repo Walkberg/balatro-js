@@ -1,5 +1,5 @@
-import { getPackConfig } from "../../cards/packs";
-import { Consumable } from "../../plugins";
+import { getPackConfig } from "../../core/cards/packs";
+import { type Consumable } from "../../core/plugins";
 import { getBackgroundPosition, getCardSizeStyle } from "./card";
 import { CARD_X_SIZE, CARD_Y_SIZE, SIZE_FACTOR } from "./card";
 

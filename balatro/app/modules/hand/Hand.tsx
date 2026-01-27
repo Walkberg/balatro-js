@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { CardContainer } from "../../components/BalatroPage";
 import { PokerCard } from "../cards/PokerCard";
-import { ReactNode, useCallback, useEffect, useState } from "react";
+import { type ReactNode, useCallback, useEffect, useState } from "react";
 import { sortByRank, sortBySuit } from "../../core/balatro";
-import { PokerCard as ICard } from "../../core/cards/poker-cards";
-import { useCurrentGame } from "../../core/BalatroProvider";
-import { HandManagerPlugin } from "../../core/plugins";
-import { Hand as IHand } from "../../core/balatro";
+import { type PokerCard as ICard } from "../../core/cards/poker-cards";
+import { useCurrentGame } from "../../components/BalatroProvider";
+import { type HandManagerPlugin } from "../../core/plugins";
+import { type Hand as IHand } from "../../core/balatro";
 
 import {
   closestCenter,
@@ -16,7 +16,6 @@ import {
   DragStartEvent,
   MouseSensor,
   TouchSensor,
-  UniqueIdentifier,
   useSensor,
   useSensors,
 } from "@dnd-kit/core";

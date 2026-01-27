@@ -1,15 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { useCurrentGame } from "../../core/BalatroProvider";
+import { useCurrentGame } from "../../components/BalatroProvider";
 import {
-  BaseScore,
+  type BaseScore,
   getHandScorePlugin,
-  HandScoreManagerPlugin,
+  type HandScoreManagerPlugin,
 } from "../../core/plugins/hand-score-manager-plugin";
 import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { ScoreDetail } from "../../components/BalatroPage";
-import { PlanetType } from "../../core/balatro";
 
 export const useBalatroHandScore = () => {
   const [refresh, setRefresh] = useState(false);

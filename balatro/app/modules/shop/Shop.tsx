@@ -1,18 +1,18 @@
-import { Shop as IShop, generateShop } from "../../core/balatro";
+import { type Shop as IShop, generateShop } from "../../core/balatro";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { CardContainer, useGameManager } from "../../components/BalatroPage";
-import { Buyable, ShopPlugin } from "../../core/plugins/shop-plugin";
-import { useCurrentGame } from "../../core/BalatroProvider";
+import { type Buyable, type ShopPlugin } from "../../core/plugins/shop-plugin";
+import { useCurrentGame } from "../../components/BalatroProvider";
 import { ConsumableCard } from "../consumables/ConsumableCard";
 import { cn } from "@/lib/utils";
 import { BuffonCard } from "../buffons/BuffonCard";
 import {
   getShopPackPlugin,
-  ShopPackPlugin,
+  type ShopPackPlugin,
 } from "../../core/plugins/shop-pack-plugin";
 import { PlayCards } from "../cards/PokerCards";
-import { PokerCard } from "../../core/cards/poker-cards";
+import { type PokerCard } from "../../core/cards/poker-cards";
 import { isBuyable } from "../../core/cards/cards";
 import { PriceIndicator } from "./PriceIndicator";
 import { Buy } from "./Buy";

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { useGameManager } from "../../../components/BalatroPage";
+import { useGameManager } from "../../components/BalatroPage";
 
 export const BlindWin = ({}: {}) => {
   const gameManager = useGameManager();

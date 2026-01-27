@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { ConsumableCard } from "./ConsumableCard";
 import { useConsumableManager } from "./useConsumable";
-import { Consumable } from "../../plugins";
-import { CardContainer } from "../../../components/BalatroPage";
-import { isSellable } from "../../cards/cards";
+import { type Consumable } from "../../core/plugins";
+import { CardContainer } from "../../components/BalatroPage";
+import { isSellable } from "../../core/cards/cards";
 import { SellCard } from "./SellCard";
 import { UseCard } from "./UseCard";
 

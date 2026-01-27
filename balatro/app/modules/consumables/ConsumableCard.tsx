@@ -1,10 +1,10 @@
-import { Consumable } from "../../plugins/consumables-manager-plugin";
+import { type Consumable } from "../../core/plugins/consumables-manager-plugin";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { ReactNode } from "react";
+import { type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { PlanetCard } from "./PlanetCard";
 import { Pack } from "./Pack";
@@ -36,7 +36,7 @@ export const ConsumableCard = ({
         <div className={cn("relative", { "-translate-y-4 z-20": selected })}>
           <div
             className={cn(
-              "absolute inset-0 bg-gray-700 opacity-50 translate-x-1 -z-50 translate-y-1 rounded-xl"
+              "absolute inset-0 bg-gray-700 opacity-50 translate-x-1 -z-50 translate-y-1 rounded-xl",
             )}
           />
           <div className="flex flex-row items-center">

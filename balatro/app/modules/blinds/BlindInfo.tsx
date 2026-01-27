@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { useCurrentGame } from "../../BalatroProvider";
-import { BlindManagerPlugin } from "../../plugins";
+import { useCurrentGame } from "../../components/BalatroProvider";
+import { type BlindManagerPlugin } from "../../core/plugins";
 
 interface BlindInfoProps {}
 

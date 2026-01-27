@@ -3,7 +3,7 @@ import { DeckUI } from "./Deck";
 import { Button } from "@/components/ui/button";
 import { useDecks } from "./useDecks";
 import { getDeckConfig } from "../../core/decks/decks";
-import { useCurrentGame } from "../../core/BalatroProvider";
+import { useCurrentGame } from "../../components/BalatroProvider";
 import { type GameManagerPlugin } from "../../core/plugins/game-manager";
 import { getDecksPlugin } from "../../core/plugins/decks-manager-plugin";
 

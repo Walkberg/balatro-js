@@ -1,4 +1,4 @@
-import { PokerCard as IPokerCard } from "../../cards/poker-cards";
+import { type PokerCard as IPokerCard } from "../../core/cards/poker-cards";
 import { PokerCard } from "./PokerCard";
 
 interface PlayCardsProps {

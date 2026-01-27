@@ -1,5 +1,5 @@
-import { getPlanetConfig } from "../../cards/planets";
-import { Consumable } from "../../plugins";
+import { getPlanetConfig } from "../../core/cards/planets";
+import { type Consumable } from "../../core/plugins";
 import {
   getBackgroundPosition,
   getCardSizeStyle,

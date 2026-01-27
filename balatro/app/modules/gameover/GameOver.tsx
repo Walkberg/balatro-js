@@ -6,7 +6,7 @@ import {
 import { RunStatistics } from "../run-statistics/RunStatistics";
 import React, { useState } from "react";
 import { type GameManagerPlugin } from "../../core/plugins/game-manager";
-import { useCurrentGame } from "../../core/BalatroProvider";
+import { useCurrentGame } from "../../components/BalatroProvider";
 
 export const GameOver = () => {
   const { balatro } = useCurrentGame();

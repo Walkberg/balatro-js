@@ -1,6 +1,6 @@
-import { ReactNode, createContext, useContext } from "react";
-import { useBalatroGame } from "./useBalatro";
-import { BalatroEngine } from "./balatro-engine";
+import { type ReactNode, createContext, useContext } from "react";
+import { useBalatroGame } from "../hooks/useBalatro";
+import { type BalatroEngine } from "../core/balatro-engine";
 
 interface BalatroContextType {
   seed: string;
@@ -29,7 +29,7 @@ export const useCurrentGame = () => {
 
   if (context == null) {
     throw new Error(
-      "useBattleGround must be used within a BattleGroundProvider"
+      "useBattleGround must be used within a BattleGroundProvider",
     );
   }
 

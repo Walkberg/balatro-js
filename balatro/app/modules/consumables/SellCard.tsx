@@ -1,4 +1,4 @@
-import { Sellable } from "../../cards/cards";
+import { type Sellable } from "../../core/cards/cards";
 
 interface SellCardProps {
   onSell: () => void;
