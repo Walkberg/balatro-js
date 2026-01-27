@@ -12,16 +12,10 @@ export const PokerCardSlot = forwardRef<HTMLDivElement, PokerCardSlotProps>(
       <div
         ref={ref}
         data-slot-id={slotId}
-        className={cn(
-          "flex items-end justify-center",
-          "w-[142px] h-[190px]",
-          className
-        )}
-      >
-        {/* Position physique du slot - vide pour le layout flex */}
-      </div>
+        className={cn("flex justify-center grow", className)}
+      ></div>
     );
-  }
+  },
 );
 
 PokerCardSlot.displayName = "PokerCardSlot";
