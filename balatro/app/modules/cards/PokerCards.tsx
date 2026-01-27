@@ -36,8 +36,8 @@ export const PlayCards = ({
         if (element) {
           const rect = element.getBoundingClientRect();
           newPositions.set(cardId, {
-            x: rect.left,
-            y: rect.top,
+            x: rect.left + rect.width / 2,
+            y: rect.top + rect.height / 2,
           });
         }
       });
@@ -77,7 +77,7 @@ export const PlayCards = ({
               className="absolute pointer-events-auto"
               style={{
                 transform: position
-                  ? `translate(${position.x}px, ${position.y}px)`
+                  ? `translate(${position.x}px, ${position.y}px) translate(-50%, -50%)`
                   : "translate(-9999px, -9999px)",
                 transition: "transform 0.3s ease-out",
               }}

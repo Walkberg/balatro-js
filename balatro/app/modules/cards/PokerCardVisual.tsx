@@ -46,7 +46,7 @@ export const PokerCardVisual = ({
             <div
               onClick={onSelectCard}
               className={cn(
-                "flex flex-col cursor-pointer hover:shadow-indigo-500/60 hover:scale-125",
+                "flex flex-col cursor-pointer hover:shadow-indigo-500/60 hover:scale-125 hover:z-20 z-10",
               )}
             >
               <CardEnhancer card={card} scaleFactor={scaleFactor}>
