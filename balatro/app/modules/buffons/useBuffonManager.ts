@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { useCurrentGame } from "../../BalatroProvider";
-import { BuffonsManagerPlugin } from "../../plugins";
-import { BuffonCard } from "../../cards/buffons";
+import { useCurrentGame } from "../../components/BalatroProvider";
+import { type BuffonsManagerPlugin } from "../../core/plugins";
+import { type BuffonCard } from "../../core/cards/buffons";
 
 export function useBuffonManager() {
   const { balatro } = useCurrentGame();

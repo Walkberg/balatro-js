@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useCurrentGame } from "../../components/BalatroProvider";
 import {
-  GameStats,
+  type GameStats,
   getStatManagerPlugin,
 } from "../../core/plugins/stats-manager-plugin";
 import { cn } from "@/lib/utils";

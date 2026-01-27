@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
-import { BalatroEngine, createBalatroEngine } from "../core/balatro-engine";
+import {
+  type BalatroEngine,
+  createBalatroEngine,
+} from "../core/balatro-engine";
 import { createPlayerManagerPlugin } from "../core/plugins/player-manager-plugin";
 import { createEconomyManagerPlugin } from "../core/plugins/economy-manager-plugin";
 import { createGamePlugin } from "../core/plugins/game-manager";

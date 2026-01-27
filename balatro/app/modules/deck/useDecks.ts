@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { useCurrentGame } from "../../core/BalatroProvider";
-import { DeckImpl } from "../../core/decks/decks";
+import { useCurrentGame } from "../../components/BalatroProvider";
+import { type DeckImpl } from "../../core/decks/decks";
 import { getDecksPlugin } from "../../core/plugins/decks-manager-plugin";
 
 export const useDecks = () => {

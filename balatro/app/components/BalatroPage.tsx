@@ -46,6 +46,8 @@ export const BalatroGame = () => {
 
   const [phase, setPhase] = useState<Phase>("Pause");
 
+  console.log("BalatroGame render" + phase);
+
   useEffect(() => {
     if (balatro == null) return;
 

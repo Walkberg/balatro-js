@@ -1,5 +1,5 @@
-import { Hand, PokerHandType, sortByRank } from "./balatro";
-import { CardRank, CardSuit } from "./cards/poker-cards";
+import { type Hand, type PokerHandType, sortByRank } from "./balatro";
+import { type CardRank, type CardSuit } from "./cards/poker-cards";
 
 export function evaluatePokerHand(hand: Hand): PokerHandType {
   if (isRoyalFlush(hand)) return "RoyalFlush";
@@ -79,7 +79,7 @@ export function getStraightFlush(hand: Hand): Hand {
 export function getFourOfAKind(hand: Hand): Hand {
   const counts = groupByRank(hand);
   const fourOfAKindRank = Object.keys(counts).find(
-    (rank) => counts[rank as CardRank] === 4
+    (rank) => counts[rank as CardRank] === 4,
   ) as CardRank;
   return hand.filter((card) => card.rank === fourOfAKindRank);
 }
@@ -99,7 +99,7 @@ export function getFlush(hand: Hand): Hand {
   const suitCounts = groupBySuit(hand);
 
   const flushSuit = Object.keys(suitCounts).find(
-    (suit) => suitCounts[suit as CardSuit] >= 5
+    (suit) => suitCounts[suit as CardSuit] >= 5,
   );
 
   return flushSuit ? hand.filter((card) => card.suit === flushSuit) : [];
@@ -107,7 +107,7 @@ export function getFlush(hand: Hand): Hand {
 
 export function getStraight(hand: Hand): Hand {
   const values = [...new Set(hand.map((card) => getCardValue(card.rank)))].sort(
-    (a, b) => a - b
+    (a, b) => a - b,
   );
   for (let i = 0; i <= values.length - 5; i++) {
     const straight = values.slice(i, i + 5);
@@ -121,7 +121,7 @@ export function getStraight(hand: Hand): Hand {
 export function getThreeOfAKind(hand: Hand): Hand {
   const counts = groupByRank(hand);
   const threeOfAKindRank = Object.keys(counts).find(
-    (rank) => counts[rank as CardRank] === 3
+    (rank) => counts[rank as CardRank] === 3,
   ) as CardRank;
   return hand.filter((card) => card.rank === threeOfAKindRank);
 }
@@ -129,7 +129,7 @@ export function getThreeOfAKind(hand: Hand): Hand {
 export function getTwoPair(hand: Hand): Hand {
   const pairs = groupByRank(hand);
   const pairRanks = Object.keys(pairs).filter(
-    (rank) => pairs[rank as CardRank] === 2
+    (rank) => pairs[rank as CardRank] === 2,
   ) as CardRank[];
   return hand.filter((card) => pairRanks.includes(card.rank));
 }
@@ -137,7 +137,7 @@ export function getTwoPair(hand: Hand): Hand {
 export function getPair(hand: Hand): Hand {
   return hasNOfAKind(hand, 2)
     ? hand.filter(
-        (card) => hand.filter((c) => c.rank === card.rank).length === 2
+        (card) => hand.filter((c) => c.rank === card.rank).length === 2,
       )
     : [];
 }
@@ -149,19 +149,25 @@ export function getHighCard(hand: Hand): Hand {
 }
 
 function groupByRank(hand: Hand): Record<CardRank, number> {
-  const groupByRank = hand.reduce((acc, card) => {
-    acc[card.rank] = (acc[card.rank] || 0) + 1;
-    return acc;
-  }, {} as Record<CardRank, number>);
+  const groupByRank = hand.reduce(
+    (acc, card) => {
+      acc[card.rank] = (acc[card.rank] || 0) + 1;
+      return acc;
+    },
+    {} as Record<CardRank, number>,
+  );
 
   return groupByRank;
 }
 
 function groupBySuit(hand: Hand): Record<CardSuit, number> {
-  const groupBySuit = hand.reduce((acc, card) => {
-    acc[card.suit] = (acc[card.suit] || 0) + 1;
-    return acc;
-  }, {} as Record<CardSuit, number>);
+  const groupBySuit = hand.reduce(
+    (acc, card) => {
+      acc[card.suit] = (acc[card.suit] || 0) + 1;
+      return acc;
+    },
+    {} as Record<CardSuit, number>,
+  );
 
   return groupBySuit;
 }

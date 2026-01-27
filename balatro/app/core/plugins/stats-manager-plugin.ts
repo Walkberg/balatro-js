@@ -1,5 +1,5 @@
-import { Plugin, BalatroEngine } from "../balatro-engine";
-import { PokerHandType } from "./hand-score-manager-plugin";
+import { type Plugin, type BalatroEngine } from "../balatro-engine";
+import { type PokerHandType } from "./hand-score-manager-plugin";
 
 export interface StatManagerPlugin extends Plugin {
   resetStats: () => void;
@@ -57,7 +57,7 @@ export function createStatManagerPlugin(): StatManagerPlugin {
   }
 
   function trackCardAction(
-    action: "played" | "discarded" | "bought" | "discovered"
+    action: "played" | "discarded" | "bought" | "discovered",
   ) {
     switch (action) {
       case "played":

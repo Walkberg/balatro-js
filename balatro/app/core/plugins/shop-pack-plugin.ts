@@ -1,13 +1,12 @@
 import { type Plugin } from "../balatro-engine";
 import { type BalatroEngine } from "../balatro-engine";
 import { type SeedManagerPlugin } from "./seed-manager-plugin";
-import { createRandomPokerCard, type PokerCard } from "../cards/poker-cards";
+import { type PokerCard } from "../cards/poker-cards";
 import {
   type DeckManagerPlugin,
   getDeckManagerPlugin,
 } from "./deck-manager-plugin";
-import { type CardPack } from "../balatro";
-import { PokerCardPack } from "../cards/packs";
+import { type PokerCardPack } from "../cards/packs";
 
 export interface ShopPackPlugin extends Plugin {
   openPack: (pack: PokerCardPack) => void;

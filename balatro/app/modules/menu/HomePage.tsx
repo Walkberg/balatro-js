@@ -20,12 +20,6 @@ export const BalatroHomePage = () => {
   );
 };
 
-export const BalatroButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
-    return <Button {...props} />;
-  },
-);
-
 export const PlayGame = () => {
   const { balatro } = useCurrentGame();
 
