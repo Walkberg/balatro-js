@@ -1,0 +1,155 @@
+.card-edition {
+  background: url("../assets/Editions.png") no-repeat;
+
+  height: 95px;
+  width: 71px;
+
+  image-rendering: pixelated;
+}
+
+.card-edition.negative {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.card-enhancer {
+  width: 144px;
+  height: 190px;
+  background: url("../assets/Enhancers.png") no-repeat;
+
+  height: 95px;
+  width: 71px;
+
+  image-rendering: pixelated;
+}
+
+.card-rank {
+  background: url("../assets/8BitDeck.png") no-repeat;
+
+  height: 95px;
+  width: 71px;
+
+  image-rendering: pixelated;
+}
+
+.card-consumables {
+  background: url("../assets/Consumables.png") no-repeat;
+
+  height: 95px;
+  width: 71px;
+
+  image-rendering: pixelated;
+}
+
+.card-buffon {
+  background: url("../assets/Jokers.png") no-repeat;
+  height: 95px;
+  width: 71px;
+  object-fit: cover;
+
+  image-rendering: pixelated;
+}
+
+.pack {
+  background: url("../assets/Pack.png") no-repeat;
+  height: 95px;
+  width: 71px;
+  object-fit: cover;
+
+  image-rendering: pixelated;
+}
+
+.custom-card {
+  animation: rotate3dEffect 6s infinite ease-in-out;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.deck {
+  width: 144px;
+  height: 190px;
+  background: url("../assets/Enhancers.png") no-repeat;
+
+  height: 95px;
+  width: 71px;
+
+  image-rendering: pixelated;
+}
+
+.particle {
+  transform: rotate(45deg);
+}
+
+@keyframes rotate3dEffect {
+  0% {
+    transform: rotateX(0deg) rotateY(-20deg);
+  }
+  25% {
+    transform: rotateX(20deg) rotateY(0deg);
+  }
+  50% {
+    transform: rotateX(0deg) rotateY(20deg);
+  }
+  75% {
+    transform: rotateX(-20deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(-20deg);
+  }
+}
+
+@keyframes scale-effect {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.vhs-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.vhs-overlay::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+      rgba(0, 0, 0, 0.3) 1%,
+      rgba(255, 255, 255, 0.5) 2%,
+      rgba(0, 0, 0, 0.3) 2%
+    ),
+    linear-gradient(rgba(18, 16, 16, 0) 0%, rgba(0, 0, 0, 0.25) 30%),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.02),
+      rgba(0, 255, 0, 0.01),
+      rgba(0, 0, 255, 0.02)
+    );
+  background-size: 100% 6px, 100px 100%;
+  opacity: 0.2;
+  /* animation: scanlines 0.8s infinite linear; */
+}
+
+/* Animations */
+@keyframes scanlines {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(16px);
+  }
+}
