@@ -12,7 +12,7 @@ export const RunInfo = () => {
 
   return (
     <Dialog>
-      <DialogTrigger>
+      <DialogTrigger asChild>
         <Button className="bg-red-500 hover:bg-red-700 h-full row-span-2">
           Run Info
         </Button>

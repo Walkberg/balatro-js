@@ -1,4 +1,4 @@
-import { Balatro } from "app/components/BalatroPage";
+import { BalatroGame } from "app/components/BalatroPage";
 import type { Route } from "./+types/home";
 import { BalatroProvider } from "app/components/BalatroProvider";
 
@@ -12,7 +12,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <BalatroProvider seed={"546"}>
-      <Balatro />
+      <BalatroGame />
     </BalatroProvider>
   );
 }

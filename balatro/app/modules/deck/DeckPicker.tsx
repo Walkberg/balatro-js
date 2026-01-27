@@ -11,14 +11,14 @@ export const DeckPicker = () => {
   const [currentDeck, setCurrentDeck] = useState<string | null>(null);
   const { decks } = useDecks();
 
+  const { balatro } = useCurrentGame();
+
   const selectedDeck =
     decks.find((deck) => deck.name === currentDeck) ?? decks[0];
 
   if (selectedDeck == null) {
     return null;
   }
-
-  const { balatro } = useCurrentGame();
 
   const game = balatro?.getPlugin<GameManagerPlugin>("game");
 
