@@ -21,8 +21,7 @@ export const PlayHand = () => {
   const [hand, setHand] = useState<IHand>([]);
 
   const handleScoreCardCalculated = async () => {
-    console.log("score-card-calculated");
-    await new Promise((resolve) => setTimeout(resolve, 4000)); // Attendre 4 secondes
+    await new Promise((resolve) => setTimeout(resolve, 4000));
   };
 
   const handleScoreCalculated = () => {
