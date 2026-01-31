@@ -40,7 +40,7 @@ export const PlayGame = () => {
           Jouer
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-3xl">
+      <DialogContent className="min-w-fit">
         <div className="flex flex-col items-center">
           <div className="flex gap-10">
             <Button className="bg-red-500 w-48">Nouvelle Partie</Button>
