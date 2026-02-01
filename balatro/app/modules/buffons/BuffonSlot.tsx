@@ -12,10 +12,8 @@ export const BuffonSlot = forwardRef<HTMLDivElement, BuffonSlotProps>(
       <div
         ref={ref}
         data-slot-id={slotId}
-        className={cn("flex items-center justify-center", className)}
-      >
-        {/* Position physique du slot - vide pour le layout flex */}
-      </div>
+        className={cn("flex items-center justify-center grow", className)}
+      ></div>
     );
   },
 );

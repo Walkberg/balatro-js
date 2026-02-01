@@ -64,12 +64,9 @@ const BlindItem = ({
 }) => {
   return (
     <div
-      className={cn(
-        "flex flex-col gap-2 w-96 grow p-2 rounded-2xl h-full pt-12 ",
-        {
-          " pt-0": selected,
-        },
-      )}
+      className={cn("flex flex-col gap-2  grow p-2 rounded-2xl h-full pt-12 ", {
+        " pt-0": selected,
+      })}
     >
       <Card className="flex flex-col p-2 border-4 border-orange-500 bg-slate-700 h-full">
         <div className="flex flex-col  gap-2  p-2 border-2 border-gray-400 rounded-xl">

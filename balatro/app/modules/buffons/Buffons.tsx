@@ -61,8 +61,7 @@ export const Buffons = ({}: BuffonsProps) => {
       currentCount={buffonManager.buffons.length}
     >
       <>
-        {/* Slots physiques pour le layout flex */}
-        <div className="flex flex-row gap-2 justify-between">
+        <div className="relative flex justify-between shrink h-full w-full">
           {buffonManager.buffons.map((buffon) => (
             <BuffonSlot
               key={buffon.id}
@@ -77,8 +76,6 @@ export const Buffons = ({}: BuffonsProps) => {
             />
           ))}
         </div>
-
-        {/* Visuels des buffons en position absolute */}
         <div className="fixed inset-0 pointer-events-none">
           {buffonManager.buffons.map((buffon) => {
             const position = slotPositions.get(buffon.id);
